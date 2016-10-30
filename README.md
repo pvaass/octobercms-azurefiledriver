@@ -2,13 +2,16 @@
 
 This plugin adds a Filesystem driver for Azure Blob Storage.
 
+It adds a custom Service Provider for Azure and adds the
+`league/flysystem-azure` composer package.
+
 ## Using the Azure driver
 
 Simply add another `disk` in `filesystems.php`.
 
 You will need your Azure Blob account name, API key and container name.
 
-```
+```php
 'disks' => [
     'azure' => [
         'driver' => 'azure',
