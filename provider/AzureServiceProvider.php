@@ -1,9 +1,10 @@
 <?php namespace Pvaass\AzureFileDriver\Provider;
 
 
-use League\Flysystem\Azure\AzureAdapter;
+use League\Flysystem\AzureBlobStorage\AzureBlobStorageAdapter;
 use League\Flysystem\Filesystem;
-use MicrosoftAzure\Storage\Common\ServicesBuilder;
+use MicrosoftAzure\Storage\Blob\BlobRestProxy;
+use MicrosoftAzure\Storage\Common\ServiceException;
 use Pvaass\AzureFileDriver\Exception\AzureStorageException;
 
 class AzureServiceProvider extends \Illuminate\Support\ServiceProvider
@@ -26,10 +27,10 @@ class AzureServiceProvider extends \Illuminate\Support\ServiceProvider
                 $config['key']
             );
 
-            $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($endpoint);
+            $blobRestProxy = BlobRestProxy::createBlobService($endpoint);
 
             return new Filesystem(
-                new AzureAdapter($blobRestProxy, $config['container'])
+                new AzureBlobStorageAdapter($blobRestProxy, $config['container'])
             );
         });
     }
