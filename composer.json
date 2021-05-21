@@ -1,5 +1,5 @@
 {
-    "name": "thixpin/azure",
+    "name": "thixpin/azurefiledriver-plugin",
     "type": "october-plugin",
     "description": "Azure packages for October CMS",
     "require": {
