@@ -10,7 +10,7 @@ class Plugin extends PluginBase
         return [
             'name' => 'Azure Blob Filesystem Driver',
             'description' => 'Driver for Microsoft Azure Blob Storage (Flock from pvaass\'s Azure Filesystem Driver)',
-            'author' => 'thixpin',
+            'author' => 'SoeThura',
             'icon' => 'icon-cloud'
         ];
     }
