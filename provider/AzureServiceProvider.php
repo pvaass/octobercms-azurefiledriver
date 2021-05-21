@@ -1,11 +1,11 @@
-<?php namespace Thixpin\AzureFileDriver\Provider;
+<?php namespace SoeThura\AzureFileDriver\Provider;
 
 
 use Thixpin\Azure\BlobStorage\AzureBlobStorageAdapter;
 use League\Flysystem\Filesystem;
 use MicrosoftAzure\Storage\Blob\BlobRestProxy;
 use MicrosoftAzure\Storage\Common\ServiceException;
-use Thixpin\AzureFileDriver\Exception\AzureStorageException;
+use SoeThura\AzureFileDriver\Exception\AzureStorageException;
 
 class AzureServiceProvider extends \Illuminate\Support\ServiceProvider
 {

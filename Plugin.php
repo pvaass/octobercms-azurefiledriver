@@ -1,6 +1,6 @@
-<?php namespace Thixpin\AzureFileDriver;
+<?php namespace SoeThura\AzureFileDriver;
 
-use Thixpin\AzureFileDriver\Provider\AzureServiceProvider;
+use SoeThura\AzureFileDriver\Provider\AzureServiceProvider;
 use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
