@@ -1,15 +1,15 @@
-<?php namespace Pvaass\AzureFileDriver\Provider;
+<?php namespace Thixpin\AzureFileDriver\Provider;
 
 
-use League\Flysystem\AzureBlobStorage\AzureBlobStorageAdapter;
+use Thixpin\Azure\BlobStorage\AzureBlobStorageAdapter;
 use League\Flysystem\Filesystem;
 use MicrosoftAzure\Storage\Blob\BlobRestProxy;
 use MicrosoftAzure\Storage\Common\ServiceException;
-use Pvaass\AzureFileDriver\Exception\AzureStorageException;
+use Thixpin\AzureFileDriver\Exception\AzureStorageException;
 
 class AzureServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-    const REQUIRED_CONFIG = ['account', 'key', 'container'];
+    const REQUIRED_CONFIG = ['account', 'key', 'container', 'blob_service_url'];
 
     public function boot()
     {
@@ -30,7 +30,7 @@ class AzureServiceProvider extends \Illuminate\Support\ServiceProvider
             $blobRestProxy = BlobRestProxy::createBlobService($endpoint);
 
             return new Filesystem(
-                new AzureBlobStorageAdapter($blobRestProxy, $config['container'])
+                new AzureBlobStorageAdapter($blobRestProxy, $config['container'], $config['blob_service_url'])
             );
         });
     }
