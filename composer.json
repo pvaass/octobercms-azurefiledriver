@@ -1,5 +1,5 @@
 {
-    "name": "thixpin/azurefiledriver-plugin",
+    "name": "soethura/azurefiledriver-plugin",
     "type": "october-plugin",
     "description": "Azure packages for October CMS",
     "require": {
