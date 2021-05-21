@@ -1,9 +1,11 @@
 {
-    "name": "pvaass/azure",
+    "name": "soethura/azurefiledriver-plugin",
     "type": "october-plugin",
     "description": "Azure packages for October CMS",
     "require": {
-        "league/flysystem-azure": "^1.0 "
+        "composer/installers": "~1.0",
+        "thixpin/azure-blob-storage": "^2.1"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

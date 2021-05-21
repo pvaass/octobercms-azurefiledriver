@@ -1,6 +1,6 @@
-<?php namespace Pvaass\AzureFileDriver;
+<?php namespace SoeThura\AzureFileDriver;
 
-use Pvaass\AzureFileDriver\Provider\AzureServiceProvider;
+use SoeThura\AzureFileDriver\Provider\AzureServiceProvider;
 use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
@@ -8,10 +8,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'Azure Filesystem Driver',
-            'description' => 'Driver for Microsoft Azure Blob Storage',
-            'author' => 'pvaass',
-            'icon' => 'icon-key'
+            'name' => 'Azure Blob Filesystem Driver',
+            'description' => 'Driver for Microsoft Azure Blob Storage (Flock from pvaass\'s Azure Filesystem Driver)',
+            'author' => 'SoeThura',
+            'icon' => 'icon-cloud'
         ];
     }
 

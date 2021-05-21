@@ -1,4 +1,4 @@
-<?php namespace Pvaass\AzureFileDriver\Exception;
+<?php namespace SoeThura\AzureFileDriver\Exception;
 
 class AzureStorageException extends \Exception {
 
